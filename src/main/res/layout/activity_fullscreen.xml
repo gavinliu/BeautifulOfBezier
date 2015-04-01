@@ -2,18 +2,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0099cc"
+    android:background="#fff"
     tools:context=".FullscreenActivity">
 
-    <TextView
-        android:id="@+id/fullscreen_content"
+    <cn.gavinliu.beautifulofbezier.BezierView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:keepScreenOn="true"
-        android:textColor="#33b5e5"
-        android:textSize="50sp"
-        android:textStyle="bold" />
-
+        android:layout_height="match_parent" />
 
 </FrameLayout>
