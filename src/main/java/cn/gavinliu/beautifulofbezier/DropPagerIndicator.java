@@ -30,7 +30,7 @@ public class DropPagerIndicator extends View {
 
     private List<PointF> mPoints;
 
-    private float mMaxRadius;
+    private float mCircleRadius;
 
     private int mPagerCount;
 
@@ -74,6 +74,14 @@ public class DropPagerIndicator extends View {
     public void setPositionAndOffset(int position, float offSet) {
         createAnimator();
         seekAnimator();
+    }
+
+    public float getCircleRadius() {
+        return mCircleRadius;
+    }
+
+    public void setCircleRadius(float circleRadius) {
+        this.mCircleRadius = circleRadius;
     }
 
     public float getFromCircleRadius() {
