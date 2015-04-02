@@ -1,12 +1,29 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
+    android:orientation="vertical"
     tools:context=".FullscreenActivity">
 
-    <cn.gavinliu.beautifulofbezier.BezierView
+    <Button
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:onClick="onBezierView"
+        android:text="BezierView" />
 
-</FrameLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:onClick="onBezierEvaluator"
+        android:text="BezierEvaluator" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:onClick="onDropPagerIndicator"
+        android:text="DropPagerIndicator" />
+
+</LinearLayout>
