@@ -25,20 +25,24 @@ public class DropPagerIndicatorActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pager);
 
-        views = new ArrayList<>();
-
-        views.add(getLayoutInflater().inflate(R.layout.layout_pager, null));
-        views.add(getLayoutInflater().inflate(R.layout.layout_pager, null));
-
         viewPager = (ViewPager) findViewById(R.id.pager);
         indicator = (DropPagerIndicator) findViewById(R.id.indicator);
 
-        indicator.setCircleRadius(50);
 
+        views = new ArrayList<>();
+        views.add(getLayoutInflater().inflate(R.layout.layout_pager, null));
+        views.add(getLayoutInflater().inflate(R.layout.layout_pager, null));
+        views.add(getLayoutInflater().inflate(R.layout.layout_pager, null));
+        views.add(getLayoutInflater().inflate(R.layout.layout_pager, null));
 
-
-
-
+        ArrayList<Integer> colors = new ArrayList<>();
+        colors.add(0xFFFF0000);
+        colors.add(0xFF00FF00);
+        colors.add(0xFF0000FF);
+        colors.add(0xFFFF00FF);
+        indicator.setColors(colors);
+        indicator.setPagerCount(views.size());
+        indicator.setMode(DropPagerIndicator.MODE_BEND);
 
 
 
