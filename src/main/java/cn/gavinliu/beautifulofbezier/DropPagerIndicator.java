@@ -170,22 +170,22 @@ public class DropPagerIndicator extends View {
         float leftX = mPoints.get(paramInt).x;
         float rightX = mPoints.get(i).x;
 
-        ObjectAnimator leftPointAnimator = ObjectAnimator.ofFloat(this, "leftCircleX", leftX, rightX);
+        ObjectAnimator leftPointAnimator = ObjectAnimator.ofFloat(this, "rightCircleX", leftX, rightX);
         leftPointAnimator.setDuration(5000L);
         leftPointAnimator.setInterpolator(new DecelerateInterpolator());
         mAnimators.add(leftPointAnimator);
 
-        ObjectAnimator rightPointAnimator = ObjectAnimator.ofFloat(this, "rightCircleX", leftX, rightX);
+        ObjectAnimator rightPointAnimator = ObjectAnimator.ofFloat(this, "leftCircleX", leftX, rightX);
         rightPointAnimator.setDuration(5000L);
         rightPointAnimator.setInterpolator(new AccelerateInterpolator(1.5F));
         mAnimators.add(rightPointAnimator);
 
-        ObjectAnimator leftCircleRadiusAnimator = ObjectAnimator.ofFloat(this, "leftCircleRadius", mMinCircleRadius, mMaxCircleRadius);
+        ObjectAnimator leftCircleRadiusAnimator = ObjectAnimator.ofFloat(this, "rightCircleRadius", mMinCircleRadius, mMaxCircleRadius);
         leftCircleRadiusAnimator.setDuration(5000L);
         leftCircleRadiusAnimator.setInterpolator(new AccelerateInterpolator(1.5F));
         mAnimators.add(leftCircleRadiusAnimator);
 
-        ObjectAnimator rightCircleRadiusAnimator = ObjectAnimator.ofFloat(this, "rightCircleRadius", mMaxCircleRadius, mMinCircleRadius);
+        ObjectAnimator rightCircleRadiusAnimator = ObjectAnimator.ofFloat(this, "leftCircleRadius", mMaxCircleRadius, mMinCircleRadius);
         rightCircleRadiusAnimator.setDuration(5000L);
         rightCircleRadiusAnimator.setInterpolator(new DecelerateInterpolator(0.8F));
         mAnimators.add(rightCircleRadiusAnimator);
